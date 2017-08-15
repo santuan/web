@@ -1,0 +1,406 @@
+---
+layout: default
+---
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(function(){
+  $('#Container').on('mixLoad', function() {
+    console.log('[event-handler] MixItUp Loaded');
+  });
+  
+  $('#Container').on('mixStart', function() {
+    console.log('[event-handler] Animation Started')
+  });
+  
+  $('#Container').on('mixEnd', function() {
+    console.log('[event-handler] Animation Ended')
+  });
+  
+  $('#Container').mixItUp({
+    callbacks: {
+      onMixLoad: function() {
+        console.log('[callback] MixItUp Loaded');
+      },
+      onMixStart: function() {
+        console.log('[callback] Animation Started');
+      },
+      onMixEnd: function() {
+        console.log('[callback] Animation Ended');
+      }
+    }
+  });
+});
+
+</script>
+
+<div class="content" id="intro">
+    <div id="large-header" class="large-header blue">
+        <canvas id="demo-canvas"></canvas>
+        <div class="main-title">
+            <h2>
+                Un espacio de <span>programación</span> y 
+                <span>diseño</span> para
+                tu emprendimiento.
+            </h2>
+            <p>Diseño y desarollo páginas web personalizadas adaptadas a todos los dispositivos</p>
+            <a class="btn red" href="#proyectos">ver últimos proyectos</a>
+        </div>
+
+    </div>
+</div>
+
+<div class="content" id="bio">
+    <div class="bio-item">
+        <figure>
+            <img src="{{site.baseurl}}/img/faq-diseno-web.jpg">
+        </figure>
+        <div class="bio-content">
+            <h3>diseño y rediseños</h3>
+            <p>
+            Me interesa conocer los proyectos para brindar la mejor solución utilizando herramientas de software libre (sin licencias).
+            Trabajo para mejorar la experiencia del usuario, brindando un sitio web optimizado para dispositivos de diferentes tamaños y plataformas. 
+            </p>
+        </div>
+    </div>
+
+    <div class="separator">
+        <!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In  -->
+        <svg version="1.1"
+             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+             x="0px" y="0px" width="803.3px" height="169.6px" viewBox="0 0 803.3 169.6" enable-background="new 0 0 803.3 169.6"
+             xml:space="preserve">
+        <defs>
+        </defs>
+        <g id="Page-1_1_" sketch:type="MSPage">
+            
+                <g id="LOHP-Desktop-02182014--3_1_" transform="translate(-332.000000, -2096.000000)" sketch:type="MSArtboardGroup" opacity="0.43">
+                <path id="line1_1_" sketch:type="MSShapeGroup" fill="none" stroke="#5F452A" stroke-width="3" stroke-dasharray="11,23" d="
+                    M333.6,2096.1c-0.9,12.2,4.9,23.5,11.1,33.6c4.5,7.3,7.8,17.9,14.1,23.7c39.7,36.7,111.4,21.7,160.7,21.7
+                    c41.6,0,83.8,1.8,125.3-2.2c36.6-3.6,73.2-8.3,109.7-11.9c101.5-10,152.1-8.6,247,21c57.3,17.9,94,43.8,132.7,82.5"/>
+            </g>
+        </g>
+        </svg>
+
+    </div>
+
+    <div class="bio-item reverse">
+        <div class="bio-content">
+            <h3>desarollo</h3>
+            <p>
+             Mi trabajo va desde el desarollo del sitio hasta la correcta implementacion en el Hosting. Desarollo páginas web autoadministrables, aplicaciones, sitios institucionales.
+            </p>
+        </div>
+        <figure>
+            <img src="{{site.baseurl}}/img/faq-programacion.jpg" style="margin-top: 35px;">
+        </figure>
+    </div>
+</div>
+
+
+<section class="intro" id="proyectos">
+    <h2>Últimos Proyectos</h2>
+
+<div class="controls">
+    <button class="ui button medium red filter" data-filter="all">todos</button>
+  <button class="ui button medium red filter" data-filter=".diseno-web">diseño web</button>
+  <button class="ui button medium red filter" data-filter=".aplicaciones">aplicaciones</button>
+  <button class="ui button medium red filter" data-filter=".audiovisuales">audiovisuales</button>
+  <button class="ui button medium inverted red filter" data-filter=".proyectos-libres">proyectos libres</button>
+</div>
+
+<div id="Container" class="container">
+
+
+  <div class="mix aplicaciones">
+    <a data-fancybox="gallery" data-src="#proyecto-decide" href="javascript:;" >
+        <img src="{{site.baseurl}}/img/decide2017.jpg">
+
+    </a>
+  </div>
+    <div class="mix diseno-web">
+    <a data-fancybox="gallery" data-src="#proyecto-dynamo" href="javascript:;" >
+        <img src="{{site.baseurl}}/img/dynamo.jpg">
+       
+    </a>
+  </div>
+    <div class="mix diseno-web">
+    <a data-fancybox="gallery" data-src="#proyecto-afda" href="javascript:;" >
+        <img src="{{site.baseurl}}/img/afda.jpg">
+
+    </a>
+  </div>
+    <div class="mix aplicaciones">
+    <a data-fancybox="gallery" data-src="#proyecto-oblat" href="javascript:;">
+        <img src="{{site.baseurl}}/img/oblat.jpg">
+
+    </a>
+  </div>
+
+  <div class="mix diseno-web">
+     <a data-fancybox="gallery" data-src="#proyecto-saso" href="javascript:;">
+        <img src="{{site.baseurl}}/img/saso.jpg">
+
+    </a>
+  </div>
+
+
+    <div class="mix diseno-web">
+     <a data-fancybox="gallery" data-src="#proyecto-icap" href="javascript:;">
+        <img src="{{site.baseurl}}/img/icap.jpg">
+
+    </a>
+  </div>
+    <div class="mix diseno-web">
+     <a data-fancybox="gallery" data-src="#proyecto-ravello" href="javascript:;">
+        <img src="{{site.baseurl}}/img/ravello.jpg">
+
+    </a>
+  </div>
+    <div class="mix proyectos-libres">
+     <a data-fancybox="gallery" data-src="#proyecto-germinacion" href="javascript:;">
+        <img src="{{site.baseurl}}/img/germinacion.jpg">
+    </a>
+  </div>
+      <div class="mix proyectos-libres">
+     <a data-fancybox="gallery" data-src="#proyecto-open-stn" href="javascript:;">
+        <img src="{{site.baseurl}}/img/open-stn.jpg">
+    </a>
+  </div>
+      <div class="mix aplicaciones">
+    <a data-fancybox="gallery" data-src="#proyecto-juegos-afda" href="javascript:;">
+        <img src="{{site.baseurl}}/img/juegos-afda.jpg">
+
+    </a>
+  </div>
+      <div class="mix proyectos-libres">
+     <a data-fancybox="gallery" data-src="#proyecto-energia-libre" href="javascript:;">
+        <img src="{{site.baseurl}}/img/energia-libre.jpg">
+    </a>
+  </div>
+
+    <div class="mix proyectos-libres">
+     <a data-fancybox="gallery" data-src="#proyecto-sarana" href="javascript:;">
+        <img src="{{site.baseurl}}/img/sarana.jpg">
+
+    </a>
+  </div>
+    <div class="mix audiovisuales">
+     <a data-fancybox="gallery" href="https://vimeo.com/83609575">
+        <img src="{{site.baseurl}}/img/verde-urbano.jpg">
+    </a>
+  </div>
+</div>
+
+
+
+
+    
+
+</section>
+
+<section class="intro contacto" id="contacto">
+    <h2>
+        Contacto
+    </h2>
+    <h5 style="font-size: 25px; margin: 0 0 25px 0;">
+        santuan.dg@gmail.com
+    </h5>
+    <div class="cognito-form ">
+    <iframe src="https://services.cognitoforms.com/f/-pK5tws7fkyjdhjone8-Wg?id=1" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="657" width="100%"></iframe>
+    <script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+    </div>
+</section>
+
+
+<div style="display: none;" class="fancy-project proyecto-saso" id="proyecto-saso">
+    <div class="item">
+        <div class="item-tag">
+           <i class="fa fa-globe" aria-hidden="true"></i> Diseño de Pagina web
+        </div>
+        <h3>Sociedad Argentina de Superficie Ocular</h3>
+        <p>
+        La Sociedad Argentina de Superficie Ocular se dedica a la promoción del estudio, comprensión y manejo de las patologías de la superficie ocular.
+        </p>
+        <a class="btn red" href="http://sasoargentina.com.ar/" target="_blank">visitar sitio</a>
+    </div>
+</div>
+
+<div style="display: none;" class="fancy-project proyecto-dynamo" id="proyecto-dynamo">
+    <div class="item">
+        <div class="item-tag">
+           <i class="fa fa-globe" aria-hidden="true"></i> Diseño de Pagina web
+        </div>
+        <h3>Dynamo</h3>
+        <p>
+    Dynamo es una banda de hard rock moderno que fusiona hard rock con elementos de metalcore y tintes de blues y rock.
+        </p>
+        <a class="btn red" href="http://dynamorock.com.ar/" target="_blank">visitar sitio</a>
+    </div>
+</div>
+
+<div style="display: none;" class="fancy-project proyecto-afda" id="proyecto-afda">
+    <div class="item">
+    <div class="item-tag">
+       <i class="fa fa-globe" aria-hidden="true"></i> Diseño de Pagina web
+    </div>
+        <h3>Asociasion de familias Diversas en Argentina</h3>
+        <p>
+    La Asociación de Familias Diversas de Argentina es una ONG que promueve la inclusión y la igualdad real para todas las familias celebrando la diversidad.
+        </p>
+        <a class="btn red" href="http://afda.com.ar/" target="_blank">visitar sitio</a>
+    </div>
+</div>
+
+
+<div style="display: none;" class="fancy-project proyecto-decide" id="proyecto-decide">
+    <div class="item">
+    <div class="item-tag blue">
+       <i class="fa fa-tablet" aria-hidden="true"></i> Diseño de APP
+    </div>
+        <h3>Decide 2017</h3>
+        <p>
+      Aplicacion para la ciudadanía. Un espacio de información que les permite conocer los criterios políticos de cada uno de los candidatos nacionales a la asamblea sobre 10 temas de interes público.
+        </p>
+        <a class="btn blue" href="http://decide2017.com/" target="_blank">visitar sitio</a>
+         <a class="btn" href="https://github.com/Goblab/decide2017" target="_blank">ver código fuente</a>
+    </div>
+</div>
+
+<div style="display: none;" class="fancy-project proyecto-juegos-afda" id="proyecto-juegos-afda">
+    <div class="item">
+    <div class="item-tag blue">
+       <i class="fa fa-tablet" aria-hidden="true"></i> Diseño de APP
+    </div>
+        <h3>Juegos para AFDA</h3>
+        <p>
+            Aplicación de un juego de Memotest adaptado a la realidad de las diversas familias.
+        </p>
+        <a class="btn blue" href="http://afda.com.ar/juegos-afda/#/" target="_blank">visitar sitio</a>
+         <a class="btn" href="https://github.com/kush-team/pisku-afda" target="_blank">ver código fuente</a>
+    </div>
+</div>
+
+<div style="display: none;" class="fancy-project proyecto-icap" id="proyecto-icap">
+    <div class="item">
+        <div class="item-tag">
+           <i class="fa fa-globe" aria-hidden="true"></i> Diseño de Pagina web
+        </div>
+        <h3>Instituto de Capacitación Parlamentaria</h3>
+        <p>
+        El instituto de capacitacion de la Camara de Diputados de la Nación es un sitio para presentar las últimas noticias, agenda y para brindar de manera virtual contenido sobre la capacitacion parlamentaria.
+        </p>
+        <a class="btn red" href="http://capacitacion.hcdn.gob.ar/" target="_blank">visitar sitio</a>
+    </div>
+</div>
+
+<div style="display: none;" class="fancy-project proyecto-oblat" id="proyecto-oblat">
+    <div class="item">
+    <div class="item-tag blue">
+       <i class="fa fa-tablet" aria-hidden="true"></i> Diseño de APP
+    </div>
+        <h3>Observatorio Latinoamericano</h3>
+        <p>
+    OBLAT tiene por objetivo contribuir con los debates sobre los procesos democráticos de América Latina. La plataforma reúne información sobre resultados electorales, sistemas y partidos políticos desde la década de los noventa. 
+        </p>
+        <a class="btn blue" href="http://oblat.am/" target="_blank">visitar sitio</a>
+        <a class="btn" href="https://github.com/Goblab/observatorio-electoral" target="_blank">ver código fuente</a>
+    </div>
+</div>
+
+<div style="display: none;" class="fancy-project proyecto-ravello" id="proyecto-ravello">
+    <div class="item">
+    <div class="item-tag">
+       <i class="fa fa-globe" aria-hidden="true"></i> Diseño de Pagina web
+    </div>
+        <h3>Ravello</h3>
+        <p>
+    Desde hace 20 años que Ravello ofrece diariamente a sus clientes lo mejor de nuestra cocina en un ambiente cálido y distendido para toda la familia.
+        </p>
+        <a class="btn red" href="http://www.ravello.com.ar/" target="_blank">visitar sitio</a>
+    </div>
+</div>
+
+<div style="display: none;" class="fancy-project proyecto-open-stn" id="proyecto-open-stn">
+    <div class="item">
+        <div class="item-tag orange">
+           <i class="fa fa-github-alt" aria-hidden="true"></i> Proyecto libre
+        </div>
+        <h3>Colecciones de Software Libre</h3>
+        <p>
+Este sitio fue creado utilizando tecnologias gratuitas como Jekyll y Github. 
+Su intención es la recopilar todas las herramientas libres que andan circulando por todo internet.
+        </p>
+        <a class="btn orange" href="http://santuan.github.io/stn/" target="_blank">visitar sitio</a>
+        <a class="btn" href="https://github.com/santuan/stn" target="_blank">ver código fuente</a>
+    </div>
+</div>
+
+<div style="display: none;" class="fancy-project proyecto-energia-libre" id="proyecto-energia-libre">
+    <div class="item">
+        <div class="item-tag orange">
+           <i class="fa fa-github-alt" aria-hidden="true"></i> Proyecto libre
+        </div>
+        <h3>Energia Libre</h3>
+        <p>
+        Traduccion del ingles al español del Manifiesto Open Source y creacion del sitio para acceder a esa informacion poniendo enfasis en el texto
+        </p>
+        <a class="btn orange" href="https://ama-trama.github.io/manifiesto-energia-libre/" target="_blank">visitar sitio</a>
+        <a class="btn" href="https://github.com/ama-trama/manifiesto-energia-libre" target="_blank">ver código fuente</a>
+    </div>
+</div>
+
+<div style="display: none;" class="fancy-project proyecto-germinacion" id="proyecto-germinacion">
+    <div class="item">
+        <div class="item-tag orange">
+           <i class="fa fa-github-alt" aria-hidden="true"></i> Proyecto libre
+        </div>
+        <h3>Germinacion del camino </h3>
+        <p>
+    Se trata aquí de enumerar una serie de afecciones comunes, cuya resolución puede ser acompañada del uso de plantas para la salud. Una vez más vale la pena aclarar que se trata de un enfoque alopático en el medio doméstico, para resolver situaciones simples que no requieren de mayores y más complejos recursos.
+        </p>
+        <a class="btn orange" href="https://ama-trama.github.io/germinacion-del-camino/" target="_blank">visitar sitio</a>
+        <a class="btn" href="https://github.com/ama-trama/germinacion-del-camino" target="_blank">ver código fuente</a>
+    </div>
+</div>
+
+
+
+<div style="display: none;" class="fancy-project proyecto-sarana" id="proyecto-sarana">
+    <div class="item">
+        <div class="item-tag red">
+           <i class="fa fa-pencil" aria-hidden="true"></i> Diseño de institucional
+           </div>
+        <h3>Saraña Huwitaqui </h3>
+        <p>Eli y Manza forman este grupo de educadores viajando por el país haciendo talleres de recreación en distintos espacios educativos y socioculturales.
+​
+        </p>
+        <a class="btn red" href="https://www.facebook.com/CaminandoNuestraBonitaTierra/" target="_blank">visitar sitio</a>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Santuan - Diseño Web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="{{site.baseurl}}/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Alegreya+Sans+SC:100,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="{{site.baseurl}}/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{site.baseurl}}/js/jquery.fancybox.min.css" />
+    <script src="{{site.baseurl}}/js/jquery.fancybox.min.js"></script>
+    <script src="{{site.baseurl}}/js/jquery.mixitup.min.js"></script>
+
+    
+    <!--[if IE]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+	<body>
+		<div class="main-container">
+			<nav>
+               <a href="#intro" class="logo">
+                   <img src="{{site.baseurl}}/img/logo-stn.svg" alt="logo santuan" class="logo-santuan">
+                   <div class="logo-mobile">
+                   	<img src="{{site.baseurl}}/img/logo-s.svg">
+                   </div>
+               </a>
+               <div class="main-navigation">
+                   <a class="nav-intro" href="#intro">inicio</a>
+                   <a class="nav-proyecto" href="#proyectos">proyectos</a>
+                   <a class="nav-contacto" href="#contacto">contacto</a>
+               </div>  
+           </nav>
+			{{content}}
+			<footer>
+          <p style="padding: 0 15px;">
+            Este sitio es de licencia libre. Esta alojado en Github y el código fuente puede ser descargado desde <a href="https://github.com/santuan/web">aquí</a>.
+          </p>
+          <small><i class="fa fa-github-alt" aria-hidden="true" style="margin-right: 15px;"></i> 2017 santuan</small>
+			</footer>
+		</div>
+	</body>
+	<script src="{{site.baseurl}}/js/rAF.js"></script>
+	<script src="{{site.baseurl}}/js/animated-header.js"></script>
+
+</html>
