@@ -453,7 +453,7 @@ footer {
 }
 
 .filter {
-@include media($ivertical) {
+@include media($ipad) {
 	margin: 5px;
 }
 }
@@ -528,6 +528,10 @@ button + label{
   display: none;
 
   img {
+  	width: 100%;
+  }
+
+   video {
   	width: 100%;
   }
 
