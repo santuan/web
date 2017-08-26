@@ -85,6 +85,14 @@ nav {
     top: -7px;
 	}
 
+	@include media($jaz) {
+		padding: 10px 0;
+		font-size: 14px;
+		margin: 0 5px;
+	}
+
+
+
 	&:hover {
 		color: #34495e;
 	}
